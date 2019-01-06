@@ -1,29 +1,19 @@
 # vue-draw
 
-## Project setup
-```
-yarn install
+<img src="./screenshots/vue-draw.png" width="70%">
+
+## Props
+``` html
+   <CanvasDraw
+    :width="640"
+    :height="480"
+    :brushSize="18"
+    :outputName="'example'"/>
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+| Prop        | Type    | Default |
+| ----------- |:-------:| -------:|
+| width       | Number  | 640     |
+| height      | Number  | 480     |
+| brushSize   | Number  | 12      |
+| outputName  | String  | canvas  |
