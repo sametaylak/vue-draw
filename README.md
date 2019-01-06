@@ -17,3 +17,9 @@
 | height      | Number  | 480     |
 | brushSize   | Number  | 12      |
 | outputName  | String  | canvas  |
+
+## TODOs
+
+- [ ] More Tools (Paint Bucket etc.)
+- [ ] Canvas Export Settings
+- [ ] Better UI!
