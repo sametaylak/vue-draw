@@ -56,7 +56,6 @@ export default {
         },
         {
           name: 'Eraser',
-          color: '#F9F9F9',
         },
       ],
       selectedToolIdx: 0,
@@ -96,7 +95,13 @@ export default {
       this.drawCursor(event);
       if (!this.isDrawing) return;
 
-      this.canvasContext.strokeStyle = this.tools[this.selectedToolIdx].color;
+      if (this.tools[this.selectedToolIdx].name === 'Eraser') {
+        this.canvasContext.globalCompositeOperation = 'destination-out';
+      } else {
+        this.canvasContext.globalCompositeOperation = 'source-over';
+        this.canvasContext.strokeStyle = this.tools[this.selectedToolIdx].color;
+      }
+
       this.canvasContext.beginPath();
       this.canvasContext.moveTo(this.lastX, this.lastY);
       this.canvasContext.lineTo(event.offsetX, event.offsetY);
